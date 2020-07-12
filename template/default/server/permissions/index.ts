@@ -32,4 +32,4 @@ const ruleTree = {
   },
 };
 
-export default permissions;
+export default ruleTree;
