@@ -1,30 +1,51 @@
-# {{name}}
+[![Build Status](https://travis-ci.com/bouncecode/bouncecode-cms.svg?branch=master)](https://travis-ci.com/bouncecode/bouncecode-cms)
 
-> {{description}}
+# BounceCode CMS
 
-[![NPM](https://img.shields.io/npm/v/{{name}}.svg)](https://www.npmjs.com/package/{{name}}) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+궁금하신게 있으시면 언제든 말씀해주세요.
 
-## Install
+카카오톡 오픈채팅: https://open.kakao.com/o/ghJjrKbb
+
+## 서버 시작
 
 ```bash
-npm install --save {{name}}
+docker-compose up --build
 ```
 
-## Usage
+## Storybook 실행
 
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from '{{name}}'
-import '{{name}}/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+```bash
+yarn storybook
 ```
 
-## License
+## Jest 유닛 테스트
 
-{{license}} © [{{author}}](https://github.com/{{author}})
+```bash
+docker-compose run --rm app \
+  bash -c "yarn test"
+```
+
+## Storybook, Jest, Typedoc 문서화
+
+```bash
+docker-compose run --rm app \
+  bash -c "yarn docs"
+```
+
+## 관리자 추가
+
+```bash
+# 회원가입 후 실행하셔야합니다.
+docker-compose run --rm app \
+  bash -c "yarn admin:add --email=tpnet3@gmail.com"
+```
+
+## 스크린샷
+
+![Graphql](media/screencapture-graphql.png)
+
+![Dashboard](media/screencapture-dashboard.png)
+
+![LogIn](media/screencapture-login.png)
+
+![SignUp](media/screencapture-signup.png)
