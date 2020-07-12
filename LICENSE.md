@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
 Original work Copyright (c) 2020 Travis Fischer <travis@transitivebullsh.it>
+
 Modified work Copyright (c) 2020 BounceCode, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
