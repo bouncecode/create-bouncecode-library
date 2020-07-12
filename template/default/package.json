@@ -29,7 +29,10 @@
     "docs:storybook": "build-storybook -c .storybook -o docs/uis",
     "docs:typedoc": "typedoc --media media --out docs/apis --plugin typedoc-plugin-external-module-name server client pages",
     "test": "NODE_ENV=test jest",
-    "postinstall": "tsc --module commonjs"
+    "postinstall": "./node_modules/.bin/tsc --module commonjs"
+  },
+  "dependencies": {
+    "typescript": "~3.8"
   },
   "devDependencies": {
     "@apollo/react-hooks": "^3.1.5",
@@ -82,7 +85,6 @@
     "typedoc-plugin-external-module-name": "^3.1.0",
     "typedoc": "^0.17.7",
     "typeorm": "^0.2.24",
-    "typescript": "~3.8",
     "yup": "^0.28.5"
   }
 }
