@@ -17,7 +17,7 @@
     "experimentalDecorators": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "outDir": "./build"
+    "outDir": "./dist"
   },
   "exclude": ["node_modules", "**/*.js"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./build/**/*"]
