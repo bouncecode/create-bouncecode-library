@@ -19,6 +19,6 @@
     "baseUrl": ".",
     "outDir": "./dist"
   },
-  "exclude": ["node_modules", "**/*.js"],
+  "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./dist/**/*"]
 }
