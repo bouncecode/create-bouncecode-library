@@ -18,6 +18,6 @@
     "jsx": "preserve",
     "baseUrl": "."
   },
-  "exclude": ["node_modules", "bouncecode.config.js", "env.config.js"],
+  "exclude": ["node_modules", "**/*.js"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
