@@ -28,7 +28,8 @@
     "docs": "npm run test && npm run docs:typedoc && npm run docs:storybook",
     "docs:storybook": "build-storybook -c .storybook -o docs/uis",
     "docs:typedoc": "typedoc --media media --out docs/apis --plugin typedoc-plugin-external-module-name server client pages",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "postinstall": "tsc --module commonjs"
   },
   "devDependencies": {
     "@apollo/react-hooks": "^3.1.5",
