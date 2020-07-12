@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "CLI for BounceCode library",
   "repository": "bouncecode/create-bouncecode-library",
-  "author": "BounceCode, Inc.",
+  "author": "Travis Fischer <travis@transitivebullsh.it>, BounceCode, Inc.",
   "main": "index.js",
   "license": "MIT",
   "engines": {
