@@ -1,16 +1,16 @@
 {
-  "name": "create-react-library",
+  "name": "create-bouncecode-library",
   "version": "3.1.1",
-  "description": "CLI for easily bootstrapping modern react libraries",
-  "repository": "transitive-bullshit/create-react-library",
-  "author": "Travis Fischer <travis@transitivebullsh.it>",
+  "description": "CLI for BounceCode library",
+  "repository": "bouncecode/create-bouncecode-library",
+  "author": "BounceCode, Inc.",
   "main": "index.js",
   "license": "MIT",
   "engines": {
     "node": ">=10"
   },
   "bin": {
-    "create-react-library": "index.js"
+    "create-bouncecode-library": "index.js"
   },
   "scripts": {
     "test": "ava -v && standard *.js lib/*.js"
