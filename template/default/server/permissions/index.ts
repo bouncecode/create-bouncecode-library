@@ -8,7 +8,7 @@
  * @preferred
  */
 
-import { deny, allow, rule, shield, and, or, not } from "graphql-shield";
+import { deny, allow, rule, and, or, not } from "graphql-shield";
 import { Context } from "../express";
 
 /**
@@ -32,10 +32,4 @@ const ruleTree = {
   },
 };
 
-/**
- * {@link ruleTree} 를 바탕으로 권한을 설정합니다.
- *
- * @author BounceCode, Inc.
- */
-const permissions = shield(ruleTree);
 export default permissions;

@@ -6,25 +6,29 @@
 
 import "reflect-metadata";
 import express from "express";
+import path from "path";
+import _ from "lodash";
 import { ApolloServer } from "apollo-server-express";
 import { applyMiddleware } from "graphql-middleware";
 import { buildSchemaSync, NonEmptyArray } from "type-graphql";
 import { parseAuthHeader } from "./lib/parseAuthHeader";
 import { connectDatabase } from "./lib/connectDatabase";
 import * as bouncecodeConfig from "../bouncecode.config";
-import path from "path";
-import _ from "lodash";
+import { shield } from "graphql-shield";
 
 /**
- * GraphQL Resolver 에 대한 권한을 확인하는 파일을 가져옵니다.
+ * {@link ruleTree} 를 바탕으로 권한을 설정합니다.
  *
  * @author BounceCode, Inc.
  */
-const permissions = _.merge(
-  require("./permissions").default,
-  ...(bouncecodeConfig.libraries || []).map(
-    (library) =>
-      require(path.join(__dirname, "..", library, "server/permissions")).default
+const permissions = shield(
+  _.merge(
+    require("./permissions").default,
+    ...(bouncecodeConfig.libraries || []).map(
+      (library) =>
+        require(path.join(__dirname, "..", library, "server/permissions"))
+          .default
+    )
   )
 );
 
