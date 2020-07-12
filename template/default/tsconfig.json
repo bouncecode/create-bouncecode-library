@@ -17,10 +17,6 @@
     "experimentalDecorators": true,
     "jsx": "preserve",
     "baseUrl": "."
-    // "paths": {
-    //   "client/*": ["client/*"],
-    //   "config/*": ["config/*"]
-    // }
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
