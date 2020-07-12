@@ -30,7 +30,7 @@ const permissions = shield(
           __dirname,
           "..",
           library,
-          "server/permissions/index.js"
+          "dist/server/permissions/index.js"
         )).default
     )
   )
@@ -44,7 +44,7 @@ const permissions = shield(
 const resolvers: [string, ...string[]] = [
   path.join(__dirname, "models/**/*.resolver.{ts,js}"),
   ...(bouncecodeConfig.libraries || []).map((library) =>
-    path.join(__dirname, "..", library, "server/models/**/*.resolver.js")
+    path.join(__dirname, "..", library, "dist/server/models/**/*.resolver.js")
   ),
 ];
 
