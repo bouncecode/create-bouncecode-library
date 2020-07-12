@@ -26,8 +26,12 @@ const permissions = shield(
     require("./permissions").default,
     ...(bouncecodeConfig.libraries || []).map(
       (library) =>
-        require(path.join(__dirname, "..", library, "server/permissions"))
-          .default
+        require(path.join(
+          __dirname,
+          "..",
+          library,
+          "server/permissions/index.js"
+        )).default
     )
   )
 );
@@ -40,7 +44,7 @@ const permissions = shield(
 const resolvers: [string, ...string[]] = [
   path.join(__dirname, "models/**/*.resolver.{ts,js}"),
   ...(bouncecodeConfig.libraries || []).map((library) =>
-    path.join(__dirname, "..", library, "server/models/**/*.resolver.{ts,js}")
+    path.join(__dirname, "..", library, "server/models/**/*.resolver.js")
   ),
 ];
 

@@ -29,7 +29,7 @@
     "docs:storybook": "build-storybook -c .storybook -o docs/uis",
     "docs:typedoc": "typedoc --media media --out docs/apis --plugin typedoc-plugin-external-module-name server client pages",
     "test": "NODE_ENV=test jest",
-    "postinstall": "./node_modules/.bin/tsc --module commonjs"
+    "postinstall": "./node_modules/.bin/tsc --module commonjs --noEmit false"
   },
   "dependencies": {
     "typescript": "~3.8"
