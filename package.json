@@ -1,6 +1,6 @@
 {
   "name": "create-bouncecode-library",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "CLI for BounceCode library",
   "repository": "bouncecode/create-bouncecode-library",
   "author": "Travis Fischer <travis@transitivebullsh.it>, BounceCode, Inc.",
