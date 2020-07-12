@@ -8,7 +8,7 @@ module.exports = [
     synchronize: true,
     entities: [
       ...(bouncecodeConfig.libraries || []).map((library) =>
-        path.join(__dirname, library, "server/models/**/*.entity.js")
+        path.join(__dirname, library, "dist/server/models/**/*.entity.js")
       ),
       path.join(__dirname, "server/models/**/*.entity.{js,ts}"),
     ],
